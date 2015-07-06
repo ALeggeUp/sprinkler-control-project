@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!--
+  index.html
+  
+  Copyright 2014-2015 [A Legge Up Consulting]
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<html class="no-js" lang="en" data-ng-app="sprinkler-control" data-ng-controller="MainController">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv='cleartype' content='on' />
+    
+    <meta name='application-name' content='Legge Family Sprinkler Control Web Application' />
+    <meta name="author" content="Stephen Legge, stephen@aleggeup.com" />
+    <meta name="description" content="Sprinkler Controller Web Application" />
+    
+    <meta name='HandheldFriendly' content='True' />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.5, maximum-scale=0.5" />
+    
+    <title>Sprinkler Controller Web Application</title>
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/unmain.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/experiment.css">
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script type="text/ng-template" id="myModalContent.tpl.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Override the REST URL</h3>
+        </div>
+        <div class="modal-body">
+            <p>Debug Mode: {{ debugMode }}</p>
+            <input type="text" class="form-control" placeholder="Text input" data-ng-model="url" />
+            Current: <b>{{ url }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.aleggeup.com">[ A Legge Up ]</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li data-ng-class="{ active : isLocation('/zones') }"><a href="#/zones">Zones <span class="sr-only">(current)</span></a></li>
+            <li data-ng-class="{ active : isLocation('/schedules') }"><a href="#/schedules">Schedules</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <!--
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+                -->
+                <li><a href="#" data-ng-click="debug()">Debug: URL Override</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div data-ng-view class="{{viewClass}}"></div>
+    
+    <!--[if lt IE 9]>
+    <script src="lib/es5-shim/es5-shim.js"></script>
+    <script src="lib/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="modules/sprinkler.zone/factory/zone.js"></script>
+    <script src="modules/sprinkler.zone/directive/canvas-directive.js"></script>
+
+    <script src="modules/sprinkler.main/controller/main-controller.js"></script>
+    <script src="modules/sprinkler.main/controller/debug-mode-modal-controller.js"></script>
+    <script src="modules/sprinkler.zone/controller/zone-controller.js"></script>
+    <script src="modules/sprinkler.schedule/controller/schedule-controller.js"></script>
+
+    <script src="modules/sprinkler.main/filter/friendly-date-filter.js"></script>
+
+    <script src="modules/app.js"></script>
+    <!-- endbuild -->
+  </body>
+
+</html>

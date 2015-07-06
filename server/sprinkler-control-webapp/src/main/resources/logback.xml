@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE configuration>
+
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{48} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="JSONFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- <file>/usr/local/apache-tomcat-7.0.59-2/logs/sprinkler-control.json</file> -->
+    <file>sprinkler-control.json</file>
+    <append>true</append>
+
+    <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+      <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+        <prettyPrint>true</prettyPrint>
+      </jsonFormatter>
+    </layout>
+    
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <!-- <fileNamePattern>${CATALINA_BASE}/logs/sprinkler-control.%d{yyyy-MM-dd}.json.log.gz</fileNamePattern> -->
+      <fileNamePattern>sprinkler-control.%d{yyyy-MM-dd}.json.log.gz</fileNamePattern>
+      <!-- Delete logs every 30 days. This is in preference to using logrotate to manage the regular clearing of logs. -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="JSONFILE" />
+  </root>
+
+</configuration>

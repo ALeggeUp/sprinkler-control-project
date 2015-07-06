@@ -1,0 +1,8 @@
+{
+  "directory": "app/lib",
+  "timeout": 120000,
+  "strict-ssl": true,
+  "analytics": false,
+  "color": false,
+  "interactive": false
+}

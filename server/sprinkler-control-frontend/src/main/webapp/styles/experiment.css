@@ -1,0 +1,195 @@
+/**
+ * experiment.css
+ *
+ * Copyright 2015 [A Legge Up Consulting]
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.clock {
+    background-color:#252525;
+    height:200px;
+    width:200px;
+    position:relative;
+    overflow:hidden;
+    float:left;
+}
+
+.clock .rotate {
+    /* There are two .rotate divs - one for each half of the background */
+    position:absolute;
+    width:200px;
+    height:200px;
+    top:0;
+    left:0;
+}
+
+.rotate.right {
+    display:none;
+    z-index:11;
+}
+
+.clock .bg, .clock .front {
+    width:100px;
+    height:200px;
+    background-color:#252525;
+    position:absolute;
+    top:0;
+}
+
+.clock .display {
+    /* Holds the number of seconds, minutes or hours respectfully */
+    position:absolute;
+    width:200px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    z-index:20;
+    color:#F5F5F5;
+    font-size:60px;
+    text-align:center;
+    top:65px;
+    left:0;
+
+    /* CSS3 text shadow: */
+    text-shadow:4px 4px 5px #333333;
+}
+
+/* The left part of the background: */
+
+.clock .bg.left { left:0; }
+
+/* Individual styles for each color: */
+.orange .bg.left { background:url(../images/bg_orange.png) no-repeat left top; }
+.green .bg.left { background:url(../images/bg_green.png) no-repeat left top; }
+.blue .bg.left { background:url(../images/bg_blue.png) no-repeat left top; }
+
+/* The right part of the background: */
+.clock .bg.right { left:100px; }
+
+.orange .bg.right{ background:url(../images/bg_orange.png) no-repeat right top; }
+.green .bg.right{ background:url(../images/bg_green.png) no-repeat right top; }
+.blue .bg.right{ background:url(../images/bg_blue.png) no-repeat right top; }
+
+.clock .front.left{
+    left:0;
+    z-index:10;
+}
+
+.zone-button.zone1, .zone-button.zone3, .zone-button.zone5, .zone-button.zone7 {
+    position: absolute;
+    left: 25px;
+}
+
+.zone-button.zone2, .zone-button.zone4, .zone-button.zone6, .zone-button.zone8 {
+    position: absolute;
+    left: 409px;
+}
+
+.zone-button.zone1, .zone-button.zone2 {
+    position: absolute;
+    top: 230px;
+}
+
+.zone-button.zone3, .zone-button.zone4 {
+    position: absolute;
+    top: 420px;
+}
+
+.zone-button.zone5, .zone-button.zone6 {
+    position: absolute;
+    top: 610px;
+}
+
+.zone-button.zone7, .zone-button.zone8 {
+    position: absolute;
+    top: 800px;
+}
+
+div.zone-button.zone9 {
+    position: absolute;
+    top: 990px;
+    left: 219px;
+}
+
+/*
+.row.ng-enter-stagger,
+.row.ng-move-stagger,
+.row.ng-leave-stagger {
+  -webkit-transition-delay:0.075s;
+  transition-delay:0.075s;
+
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+
+.row.ng-enter {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+.row.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.row.ng-leave {
+  -webkit-animation:0.5s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+  animation:0.5s my_animation;
+}
+*/
+
+.zoneView {
+	padding-top: 45px;
+	padding-bottom: 65px;
+    background-color: rgba(128, 128, 128, 0.5);
+    background-attachment: fixed;
+    bottom:0; 
+    position:fixed; 
+    top: 52px;  
+    width:100%; 
+    height: 100%;
+    background: url('Irrigation-file-blur.jpg') no-repeat 0 50%;;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	overflow-y: auto;
+}
+
+.scheduleView {
+	padding-top: 45px;
+	padding-bottom: 65px;
+    background-color: rgba(128, 128, 128, 0.5);
+    background-attachment: fixed;
+    bottom:0; 
+    position:fixed; 
+    top: 52px;  
+    width:100%; 
+    height: 100%;
+    background: url('Grass_021.jpg') no-repeat 0 50%;;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	overflow-y: auto;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.page {
+	clear: both;
+	opacity: 1.0;
+}
