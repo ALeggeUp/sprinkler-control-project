@@ -22,10 +22,14 @@
 
     var app = angular.module('sprinkler-zone');
 
-    app.controller('ZoneController', [ '$scope', '$http', '$interval', 'Zone',
-            function($scope, $http, $interval, Zone) {
-        
+    app.controller('ZoneController', [ '$scope', '$http', '$location', '$interval', 'Zone',
+            function($scope, $http, $location, $interval, Zone) {
+
                 $scope.viewClass = 'zoneView';
+
+                $scope.go = function(path) {
+                    $location.path('/zone/' + path);
+                };
 
                 $scope.loadZones = function() {
                     $scope.isLoading = true;
