@@ -151,45 +151,28 @@ div.zone-button.zone9 {
 }
 */
 
-.zoneView {
-	padding-top: 45px;
-	padding-bottom: 65px;
-    background-color: rgba(128, 128, 128, 0.5);
-    background-attachment: fixed;
-    bottom:0; 
+div > div.container > div.bg {
     position:fixed; 
-    top: 52px;  
+    top: 0px;  
+    left: 0px;
     width:100%; 
     height: 100%;
-    background: url('Irrigation-file-blur.jpg') no-repeat 0 50%;;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-	overflow-y: auto;
-}
-
-.scheduleView {
-	padding-top: 45px;
-	padding-bottom: 65px;
     background-color: rgba(128, 128, 128, 0.5);
     background-attachment: fixed;
-    bottom:0; 
-    position:fixed; 
-    top: 52px;  
-    width:100%; 
-    height: 100%;
-    background: url('Grass_021.jpg') no-repeat 0 50%;;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center; 
-	overflow-y: auto;
+    opacity: 0.99;
+    z-index: -1;
 }
 
-.navbar {
-	margin-bottom: 0px;
+div.zoneView > div.container > div.bg {
+    background: url('Irrigation-file-blur.jpg') no-repeat;
 }
 
-.page {
-	clear: both;
-	opacity: 1.0;
+div.scheduleView > div.container > div.bg {
+    background: url('Grass_021.jpg') no-repeat;
+}
+
+nav.navbar.navbar-default {
+    z-index: 1;
 }

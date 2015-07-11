@@ -17,48 +17,47 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<div class="page">
 <div class="container">
+  <div class="bg"></div>
 
-    <!--
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="jumbotron">
-            <h1>Legge Family Sprinkler Control</h1>
-            <p>Not really sure what to say here, but it seems like it should have some text here, otherwise
-            there are just a bunch of controls without any introduction and that just seems too basic.  Adding
-            this paragraph here makes it look more official, even though it doesn't really provide any useful
-            information.</p>
-            <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-          </div>
-        </div>
+  <!--
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+        <h1>Legge Family Sprinkler Control</h1>
+        <p>Not really sure what to say here, but it seems like it should have some text here, otherwise
+        there are just a bunch of controls without any introduction and that just seems too basic.  Adding
+        this paragraph here makes it look more official, even though it doesn't really provide any useful
+        information.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
       </div>
-      -->
+    </div>
+  </div>
+  -->
 
-      <div class="row ng-cloak" data-ng-repeat="zone in zones">
-        <div class="panel panel-default">
-          <div class="panel-heading">Zone {{zone.number}} Controller</div>
-          <div class="panel-body">
-            <div class="zone-information" style="float: left">
-            <h3>Zone information</h3>
-            <p>Zone Name: <strong>Zone {{zone.number}}</strong></p>
-            <p>Zone Description: <strong>{{zone.description}}</strong></p>
-            <p>Last Start: <strong>{{zone.lastStart | friendlydate}}</strong></p>
-            <p>Last End: <strong>{{zone.lastEnd | friendlydate}}</strong></p>
-            </div>
-
-            <canvas timer data-zone="zone" data-update="updateZone(zone)" width="175" height="175" style="float: right; -webkit-user-select: none;"></canvas>
-            <!--
-            <div class="progress progress-striped active">
-              <div class="progress-bar progress-bar-info" style="width: 20%"></div>
-            </div>
-            -->
-          </div>
-          <div class="panel-footer">
-            <button type="button" class="btn btn-primary" data-ng-click="startZone(zone)" data-ng-disabled="isDisabled(zone)">{{zoneActionLabel(zone)}}</button>
-          </div>
+  <div class="row ng-cloak" data-ng-repeat="zone in zones">
+    <div class="panel panel-default">
+      <div class="panel-heading">Zone {{zone.number}} Controller</div>
+      <div class="panel-body">
+        <div class="zone-information" style="float: left">
+          <h3>Zone information</h3>
+          <p>Zone Name: <strong>Zone {{zone.number}}</strong></p>
+          <p>Zone Description: <strong>{{zone.description}}</strong></p>
+          <p>Last Start: <strong>{{zone.lastStart | friendlydate}}</strong></p>
+          <p>Last End: <strong>{{zone.lastEnd | friendlydate}}</strong></p>
         </div>
-        
+
+        <canvas timer data-zone="zone" data-update="updateZone(zone)" width="175" height="175" style="float: right; -webkit-user-select: none;"></canvas>
+        <!--
+        <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+        </div>
+        -->
       </div>
-</div>
+      <div class="panel-footer">
+        <button type="button" class="btn btn-primary" data-ng-click="startZone(zone)" data-ng-disabled="isDisabled(zone)">{{zoneActionLabel(zone)}}</button>
+      </div>
+    </div>
+  </div>
+
 </div>
