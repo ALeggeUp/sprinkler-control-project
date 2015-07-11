@@ -2,6 +2,8 @@
 .classpath
 .project
 .settings
+.checkstyle
+.tern-project
 
 # Compiled Binaries
 *.com
