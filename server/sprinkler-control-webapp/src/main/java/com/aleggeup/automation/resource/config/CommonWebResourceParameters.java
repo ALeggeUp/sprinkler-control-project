@@ -1,7 +1,7 @@
 /**
- * WebResourceParameters.java
+ * CommonWebResourceParameters.java
  *
- * Copyright 2014-2015 [A Legge Up Consulting]
+ * Copyright 2015 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,20 +16,17 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.resource.config;
+package com.aleggeup.automation.resource.config;
 
 /**
  * @author Stephen Legge
+ *
  */
-public final class WebResourceParameters {
+public final class CommonWebResourceParameters {
 
-    public static final String SERVICE_NAME_ZONES = "zones";
-    public static final String SERVICE_PATH_ZONE = "zone";
-    public static final String SERVICE_PARAM_ZONE_ID = "zoneId";
+    public static final String SERVICE_NAME_STATUS = "status";
 
-    public static final String SERVICE_PATH_ACTION_START = "start";
-
-    private WebResourceParameters() {
+    private CommonWebResourceParameters() {
         // Utility class: Intentionally left empty
     }
 }

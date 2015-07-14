@@ -30,9 +30,9 @@ import org.quartz.core.QuartzSchedulerResources;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
-import com.aleggeup.automation.sprinkler.config.ServerProperties.PersistentStorageMode;
-import com.aleggeup.automation.sprinkler.config.SpecifiedServerProperties;
+import com.aleggeup.automation.config.ServerProperties;
+import com.aleggeup.automation.config.SpecifiedServerProperties;
+import com.aleggeup.automation.config.ServerProperties.PersistentStorageMode;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;

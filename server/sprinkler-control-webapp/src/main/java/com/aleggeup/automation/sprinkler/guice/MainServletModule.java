@@ -21,7 +21,7 @@ package com.aleggeup.automation.sprinkler.guice;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aleggeup.automation.sprinkler.resource.filter.CorsFilter;
+import com.aleggeup.automation.resource.filter.CorsFilter;
 import com.google.inject.Singleton;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;

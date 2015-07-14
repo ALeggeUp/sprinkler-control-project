@@ -18,7 +18,7 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
+import com.aleggeup.automation.config.ServerProperties;
 import com.aleggeup.automation.sprinkler.startup.Initialization;
 import com.aleggeup.automation.sprinkler.startup.Startup;
 import com.google.inject.AbstractModule;

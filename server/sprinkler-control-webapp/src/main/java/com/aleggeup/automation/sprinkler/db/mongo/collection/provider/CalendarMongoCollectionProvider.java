@@ -21,7 +21,7 @@ package com.aleggeup.automation.sprinkler.db.mongo.collection.provider;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
+import com.aleggeup.automation.config.ServerProperties;
 import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
 import com.google.inject.Inject;
 import com.google.inject.Provider;

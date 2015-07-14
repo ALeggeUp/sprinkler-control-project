@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.model;
+package com.aleggeup.automation.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
-import com.aleggeup.automation.sprinkler.config.ServerProperties.PersistentStorageMode;
-import com.aleggeup.automation.sprinkler.config.ServerProperties.ServerEnvironment;
+import com.aleggeup.automation.config.ServerProperties;
+import com.aleggeup.automation.config.ServerProperties.PersistentStorageMode;
+import com.aleggeup.automation.config.ServerProperties.ServerEnvironment;
 import com.google.inject.Inject;
 
 /**

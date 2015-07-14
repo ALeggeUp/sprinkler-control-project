@@ -16,15 +16,15 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.resource;
+package com.aleggeup.automation.resource;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.aleggeup.automation.sprinkler.model.ServerStatus;
-import com.aleggeup.automation.sprinkler.resource.config.WebResourceParameters;
+import com.aleggeup.automation.model.ServerStatus;
+import com.aleggeup.automation.resource.config.CommonWebResourceParameters;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
@@ -32,7 +32,7 @@ import com.google.inject.Singleton;
  * @author Stephen Legge
  */
 @Singleton
-@Path(WebResourceParameters.SERVICE_NAME_STATUS)
+@Path(CommonWebResourceParameters.SERVICE_NAME_STATUS)
 public class ServerStatusResource {
 
     private final ServerStatus serverStatus;

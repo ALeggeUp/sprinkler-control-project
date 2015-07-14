@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.parse4j.ParseObject;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
+import com.aleggeup.automation.config.ServerProperties;
 import com.aleggeup.automation.sprinkler.db.parse.converter.CalendarWrapperParseConverter;
 import com.aleggeup.automation.sprinkler.db.parse.converter.JobDetailWrapperParseConverter;
 import com.aleggeup.automation.sprinkler.db.parse.converter.OperableTriggerWrapperParseConverter;

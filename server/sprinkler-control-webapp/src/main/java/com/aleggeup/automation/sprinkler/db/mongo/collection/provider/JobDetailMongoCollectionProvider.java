@@ -18,7 +18,7 @@
 
 package com.aleggeup.automation.sprinkler.db.mongo.collection.provider;
 
-import com.aleggeup.automation.sprinkler.config.ServerProperties;
+import com.aleggeup.automation.config.ServerProperties;
 import com.aleggeup.automation.sprinkler.schedule.quartz.model.JobDetailWrapper;
 import com.google.inject.Inject;
 import com.google.inject.Provider;

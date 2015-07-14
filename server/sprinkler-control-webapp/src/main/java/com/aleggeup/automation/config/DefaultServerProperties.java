@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.config;
+package com.aleggeup.automation.config;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

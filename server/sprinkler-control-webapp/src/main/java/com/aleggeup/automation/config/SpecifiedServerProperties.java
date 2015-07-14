@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.config;
+package com.aleggeup.automation.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
