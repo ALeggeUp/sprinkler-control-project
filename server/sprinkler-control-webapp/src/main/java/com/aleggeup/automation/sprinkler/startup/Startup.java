@@ -21,6 +21,7 @@ package com.aleggeup.automation.sprinkler.startup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aleggeup.automation.analytics.AnalyticsService;
 import com.aleggeup.automation.sprinkler.hw.ProvisionedPins;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -33,19 +34,24 @@ public class Startup {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(Startup.class);
 
+    private final AnalyticsService analyticsService;
+
     private final Initialization initialization;
 
     private final ProvisionedPins provisionedPins;
 
     @Inject
-    public Startup(final Initialization initialization, final ProvisionedPins provisionedPins) {
+    public Startup(final AnalyticsService analyticsService, final Initialization initialization,
+            final ProvisionedPins provisionedPins) {
         LOGGER.info("--- Application Startup ---");
+        this.analyticsService = analyticsService;
         this.initialization = initialization;
         this.provisionedPins = provisionedPins;
         initialize();
     }
 
     public final void initialize() {
+        analyticsService.start();
         initialization.initializeZones();
         initialization.initializeScheduler();
         provisionedPins.initialize();

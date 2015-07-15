@@ -24,15 +24,12 @@ import java.util.List;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.core.QuartzSchedulerResources;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aleggeup.automation.config.ServerProperties;
-import com.aleggeup.automation.config.SpecifiedServerProperties;
 import com.aleggeup.automation.config.ServerProperties.PersistentStorageMode;
+import com.aleggeup.automation.config.SpecifiedServerProperties;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
@@ -61,6 +58,7 @@ public class GuiceConfig extends GuiceServletContextListener {
         addConditionalModules(serverProperties.persistentStorageMode(), modules);
 
         modules.add(new MainServletModule());
+        modules.add(new AnalyticsModule());
         modules.add(new DataMappingModule());
         modules.add(new SchedulerModule());
         modules.add(new HardwareModule());
@@ -92,14 +90,9 @@ public class GuiceConfig extends GuiceServletContextListener {
         LOGGER.info("contextDestroyed");
         final ServletContext servletContext = servletContextEvent.getServletContext();
         final Injector injector = (Injector) servletContext.getAttribute(Injector.class.getName());
-        final QuartzSchedulerResources qsr = injector.getInstance(QuartzSchedulerResources.class);
-        qsr.getThreadPool().shutdown(true);
-        final Scheduler scheduler = injector.getInstance(Scheduler.class);
-        try {
-            scheduler.shutdown(true);
-        } catch (final SchedulerException e) {
-            LOGGER.warn("Unable to shutdown scheduler", e);
-        }
+        final com.aleggeup.automation.sprinkler.startup.Shutdown shutdown =
+                injector.getInstance(com.aleggeup.automation.sprinkler.startup.Shutdown.class);
+        shutdown.shutdown();
         super.contextDestroyed(servletContextEvent);
     }
 }

@@ -1,7 +1,7 @@
 /**
- * StartupModule.java
+ * AnalyticsModule.java
  *
- * Copyright 2014-2015 [A Legge Up Consulting]
+ * Copyright 2015 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,33 +18,20 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
-import com.aleggeup.automation.config.ServerProperties;
-import com.aleggeup.automation.sprinkler.startup.Initialization;
-import com.aleggeup.automation.sprinkler.startup.Shutdown;
-import com.aleggeup.automation.sprinkler.startup.Startup;
+import com.aleggeup.automation.analytics.AnalyticsService;
+import com.aleggeup.automation.analytics.parse.ParseAnalyticsService;
 import com.google.inject.AbstractModule;
-import com.google.inject.Singleton;
 
 /**
  * @author Stephen Legge
  */
-public class StartupModule extends AbstractModule {
-
-    private final ServerProperties serverProperties;
-
-    public StartupModule(final ServerProperties serverProperties) {
-        this.serverProperties = serverProperties;
-    }
+public class AnalyticsModule extends AbstractModule {
 
     /* (non-Javadoc)
      * @see com.google.inject.AbstractModule#configure()
      */
     @Override
     protected void configure() {
-        bind(ServerProperties.class).toInstance(serverProperties);
-
-        bind(Initialization.class);
-        bind(Startup.class).asEagerSingleton();
-        bind(Shutdown.class).in(Singleton.class);
+        bind(AnalyticsService.class).to(ParseAnalyticsService.class);
     }
 }
