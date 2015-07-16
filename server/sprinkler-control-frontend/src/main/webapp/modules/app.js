@@ -36,12 +36,12 @@ sprinklerApp.config([ '$routeProvider', '$locationProvider', function($routeProv
     $routeProvider.when('/zones', {
         templateUrl : 'views/zones.html',
         controller : 'ZoneController'
-    }).when('/schedules', {
-        templateUrl : 'views/schedules.html',
-        controller : 'ScheduleController'
     }).when('/zone/:zoneId', {
         templateUrl : 'views/zone.html',
         controller : 'ZoneController'
+    }).when('/schedules', {
+        templateUrl : 'views/schedules.html',
+        controller : 'ScheduleController'
     }).otherwise({
         redirectTo : '/zones'
     });
