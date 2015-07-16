@@ -24,6 +24,7 @@ import java.util.Date;
 import com.aleggeup.automation.config.ServerProperties;
 import com.aleggeup.automation.config.ServerProperties.PersistentStorageMode;
 import com.aleggeup.automation.config.ServerProperties.ServerEnvironment;
+import com.aleggeup.automation.identity.ServerIdentification;
 import com.google.inject.Inject;
 
 /**
@@ -33,10 +34,13 @@ public class ServerStatus implements Serializable {
 
     private static final long serialVersionUID = -3220995295233288678L;
 
+    private final ServerIdentification serverIdentification;
+
     private final ServerProperties serverProperties;
 
     @Inject
-    public ServerStatus(final ServerProperties serverProperties) {
+    public ServerStatus(final ServerIdentification serverIdentification, final ServerProperties serverProperties) {
+        this.serverIdentification = serverIdentification;
         this.serverProperties = serverProperties;
     }
 
@@ -46,6 +50,10 @@ public class ServerStatus implements Serializable {
 
     public PersistentStorageMode getServerMode() {
         return serverProperties.persistentStorageMode();
+    }
+
+    public ServerIdentification getServerIdentification() {
+        return serverIdentification;
     }
 
     public long getServerTime() {

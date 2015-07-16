@@ -18,6 +18,8 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
+import com.aleggeup.automation.identity.SimpleServerIdentification;
+import com.aleggeup.automation.identity.ServerIdentification;
 import com.aleggeup.automation.sprinkler.hw.ProvisionedPins;
 import com.aleggeup.automation.sprinkler.hw.ZoneProvisionedGpioPins;
 import com.aleggeup.automation.sprinkler.hw.provider.GpioControllerProvider;
@@ -35,6 +37,7 @@ public class HardwareModule extends AbstractModule {
      */
     @Override
     protected void configure() {
+        bind(ServerIdentification.class).to(SimpleServerIdentification.class);
         bind(GpioController.class).toProvider(GpioControllerProvider.class).in(Singleton.class);
         bind(ProvisionedPins.class).to(ZoneProvisionedGpioPins.class);
     }
