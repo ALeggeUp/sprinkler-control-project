@@ -21,6 +21,8 @@ package com.aleggeup.automation.sprinkler.guice;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.aleggeup.automation.resource.filter.CorsFilter;
 import com.google.inject.Singleton;
 import com.sun.jersey.api.core.PackagesResourceConfig;
@@ -40,6 +42,9 @@ public class MainServletModule extends JerseyServletModule {
 
     private static final String PATH_SERVICES = "/services/*";
 
+    private static final String[] RESOURCE_PACKAGES = new String[] {"com.aleggeup.automation.resource",
+            "com.aleggeup.automation.sprinkler.resource"};
+
     /*
      * (non-Javadoc)
      *
@@ -54,7 +59,7 @@ public class MainServletModule extends JerseyServletModule {
         params.put(ResourceConfig.PROPERTY_CONTAINER_REQUEST_FILTERS, GZIP_FILTER);
         params.put(ResourceConfig.PROPERTY_CONTAINER_RESPONSE_FILTERS, GZIP_FILTER);
 
-        params.put(PackagesResourceConfig.PROPERTY_PACKAGES, "com.aleggeup.automation.sprinkler.resource");
+        params.put(PackagesResourceConfig.PROPERTY_PACKAGES, StringUtils.join(RESOURCE_PACKAGES, ";"));
         /*
         params.put(ResourceConfig.PROPERTY_CONTAINER_REQUEST_FILTERS,
                 com.sun.jersey.api.container.filter.LoggingFilter.class.getName());

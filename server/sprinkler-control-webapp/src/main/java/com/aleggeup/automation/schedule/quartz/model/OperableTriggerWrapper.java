@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule.quartz.model;
+package com.aleggeup.automation.schedule.quartz.model;
 
 import org.quartz.JobKey;
 import org.quartz.TriggerKey;
 import org.quartz.spi.OperableTrigger;
 
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge

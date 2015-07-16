@@ -18,9 +18,9 @@
 
 package com.aleggeup.automation.sprinkler.hw;
 
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.model.Zone;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 import com.google.inject.Inject;
 import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.PinState;

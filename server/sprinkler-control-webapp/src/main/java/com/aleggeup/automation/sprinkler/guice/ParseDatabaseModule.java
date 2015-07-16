@@ -18,10 +18,10 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
+import com.aleggeup.automation.odm.Datastore;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.db.parse.ParseDatastore;
 import com.aleggeup.automation.sprinkler.db.parse.collection.ParseDatastoreCollectionRegistry;
-import com.aleggeup.automation.sprinkler.odm.Datastore;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 

@@ -30,8 +30,8 @@ import org.quartz.Calendar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aleggeup.automation.sprinkler.db.mongo.codec.CalendarCodec;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.persist.mongo.codec.CalendarCodec;
+import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
 import com.sun.jersey.core.util.Base64;
 
 /**

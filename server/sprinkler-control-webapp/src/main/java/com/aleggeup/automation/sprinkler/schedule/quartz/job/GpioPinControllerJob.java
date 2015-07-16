@@ -26,10 +26,10 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.PersistJobDataAfterExecution;
 
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.model.Zone;
 import com.aleggeup.automation.sprinkler.model.Zone.ZoneState;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 import com.google.inject.Inject;
 import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.GpioPin;

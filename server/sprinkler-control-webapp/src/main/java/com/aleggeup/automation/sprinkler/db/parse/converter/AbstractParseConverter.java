@@ -23,8 +23,8 @@ import java.util.List;
 
 import org.parse4j.ParseObject;
 
+import com.aleggeup.automation.persist.Persistable;
 import com.aleggeup.automation.sprinkler.db.parse.ParseConverter;
-import com.aleggeup.automation.sprinkler.persister.Persistable;
 
 /**
  * @author Stephen Legge

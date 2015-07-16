@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.odm;
+package com.aleggeup.automation.odm;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge

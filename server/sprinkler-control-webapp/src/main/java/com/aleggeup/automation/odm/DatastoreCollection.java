@@ -1,5 +1,5 @@
 /**
- * MongoDatastore.java
+ * DatastoreCollection.java
  *
  * Copyright 2015 [A Legge Up Consulting]
  *
@@ -16,24 +16,28 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.db.mongo;
+package com.aleggeup.automation.odm;
 
-import com.aleggeup.automation.sprinkler.odm.AbstractDatastore;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.persister.Persistable;
-import com.google.inject.Inject;
+import java.util.Map;
+
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge
  */
-public class MongoDatastore extends AbstractDatastore {
+public interface DatastoreCollection<T extends Persistable> {
 
-    @Inject
-    public MongoDatastore() {
-    }
+    Iterable<T> findAll();
 
-    @Override
-    protected <T extends Persistable> DatastoreCollection<T> createCollection(final Class<T> clazz) {
-        return null;
-    }
+    T find(Map<String, String> matcher);
+
+    T update(T toUpdate);
+
+    void save(T toSave);
+
+    void save(Iterable<T> toSave);
+
+    boolean delete(T toDelete);
+
+    Class<T> classForCollection();
 }

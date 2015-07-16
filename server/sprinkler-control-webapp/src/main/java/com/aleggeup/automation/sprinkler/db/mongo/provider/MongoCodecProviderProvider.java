@@ -21,11 +21,11 @@ package com.aleggeup.automation.sprinkler.db.mongo.provider;
 import org.bson.codecs.Codec;
 import org.bson.codecs.configuration.CodecProvider;
 
+import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.schedule.quartz.model.JobDetailWrapper;
+import com.aleggeup.automation.schedule.quartz.model.OperableTriggerWrapper;
 import com.aleggeup.automation.sprinkler.db.mongo.codec.provider.SprinklerModelCodecProvider;
 import com.aleggeup.automation.sprinkler.model.Zone;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.JobDetailWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.OperableTriggerWrapper;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 

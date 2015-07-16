@@ -20,9 +20,9 @@ package com.aleggeup.automation.sprinkler.db.parse;
 
 import org.parse4j.Parse;
 
-import com.aleggeup.automation.sprinkler.odm.AbstractDatastore;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.odm.AbstractDatastore;
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge

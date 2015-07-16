@@ -20,7 +20,7 @@ package com.aleggeup.automation.sprinkler.model;
 
 import org.joda.time.DateTime;
 
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge

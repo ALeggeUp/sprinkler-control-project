@@ -34,7 +34,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.persist.mongo.codec.CalendarCodec;
+import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
 
 /**
  * @author Stephen Legge
@@ -86,8 +87,8 @@ public class CalendarCodecTest {
 
     /**
      * Test method for
-     * {@link com.aleggeup.automation.sprinkler.db.mongo.codec.CalendarCodec#encode(org.bson.BsonWriter,
-     * com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper, org.bson.codecs.EncoderContext)}.
+     * {@link com.aleggeup.automation.persist.mongo.codec.CalendarCodec#encode(org.bson.BsonWriter,
+     * com.aleggeup.automation.schedule.quartz.model.CalendarWrapper, org.bson.codecs.EncoderContext)}.
      */
     @Test
     public final void testEncodeWithNoId() {
@@ -107,8 +108,8 @@ public class CalendarCodecTest {
 
     /**
      * Test method for
-     * {@link com.aleggeup.automation.sprinkler.db.mongo.codec.CalendarCodec#encode(org.bson.BsonWriter,
-     * com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper, org.bson.codecs.EncoderContext)}.
+     * {@link com.aleggeup.automation.persist.mongo.codec.CalendarCodec#encode(org.bson.BsonWriter,
+     * com.aleggeup.automation.schedule.quartz.model.CalendarWrapper, org.bson.codecs.EncoderContext)}.
      */
     @Test
     public final void testEncodeWithId() {
@@ -127,7 +128,7 @@ public class CalendarCodecTest {
     }
 
     /**
-     * Test method for {@link com.aleggeup.automation.sprinkler.db.mongo.codec.CalendarCodec#getEncoderClass()}.
+     * Test method for {@link com.aleggeup.automation.persist.mongo.codec.CalendarCodec#getEncoderClass()}.
      */
     @Test
     public final void testGetEncoderClass() {
@@ -136,7 +137,7 @@ public class CalendarCodecTest {
     }
 
     /**
-     * Test method for {@link com.aleggeup.automation.sprinkler.db.mongo.codec.CalendarCodec#decode(
+     * Test method for {@link com.aleggeup.automation.persist.mongo.codec.CalendarCodec#decode(
      * org.bson.BsonReader, org.bson.codecs.DecoderContext)}.
      */
     @Test

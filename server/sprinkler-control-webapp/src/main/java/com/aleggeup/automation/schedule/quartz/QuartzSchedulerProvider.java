@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule.quartz;
+package com.aleggeup.automation.schedule.quartz;
 
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
@@ -26,7 +26,7 @@ import org.quartz.impl.StdScheduler;
 import org.quartz.spi.JobStore;
 import org.quartz.spi.SchedulerSignaler;
 
-import com.aleggeup.automation.sprinkler.schedule.GuiceJobFactory;
+import com.aleggeup.automation.schedule.GuiceJobFactory;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 

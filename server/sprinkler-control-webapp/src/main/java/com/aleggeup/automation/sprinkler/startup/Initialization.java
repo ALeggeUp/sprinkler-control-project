@@ -27,9 +27,9 @@ import org.quartz.SchedulerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.model.Zone;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;

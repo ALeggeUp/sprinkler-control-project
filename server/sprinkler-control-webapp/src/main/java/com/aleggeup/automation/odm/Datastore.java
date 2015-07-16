@@ -1,7 +1,7 @@
 /**
- * Persistable.java
+ * Datastore.java
  *
- * Copyright 2014-2015 [A Legge Up Consulting]
+ * Copyright 2015 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,18 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.persister;
+package com.aleggeup.automation.odm;
 
-import java.io.Serializable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
- * @author slegge
- *
+ * @author Stephen Legge
  */
-public interface Persistable extends Serializable {
+public interface Datastore {
 
-    String getId();
+    void connect();
 
-    void setId(String id);
+    <T extends Persistable> void registerCollection(DatastoreCollection<T> collection);
+
+    <T extends Persistable> DatastoreCollection<T> getCollection(Class<T> clazz);
 }

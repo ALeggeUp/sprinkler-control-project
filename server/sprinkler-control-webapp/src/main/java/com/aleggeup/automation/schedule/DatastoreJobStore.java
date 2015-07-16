@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule;
+package com.aleggeup.automation.schedule;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -51,12 +51,12 @@ import org.quartz.spi.TriggerFiredResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.JobDetailWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.OperableTriggerWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.OperableTriggerWrapper.OperableTriggerState;
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
+import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.schedule.quartz.model.JobDetailWrapper;
+import com.aleggeup.automation.schedule.quartz.model.OperableTriggerWrapper;
+import com.aleggeup.automation.schedule.quartz.model.OperableTriggerWrapper.OperableTriggerState;
 import com.google.inject.Inject;
 
 /**

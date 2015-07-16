@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.aleggeup.automation.config.ServerProperties;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.mongodb.BasicDBObject;

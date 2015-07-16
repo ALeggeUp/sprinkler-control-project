@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule.quartz;
+package com.aleggeup.automation.schedule.quartz;
 
 import org.quartz.SchedulerConfigException;
 import org.quartz.core.QuartzSchedulerResources;

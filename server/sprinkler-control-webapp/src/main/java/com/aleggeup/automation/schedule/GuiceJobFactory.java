@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule;
+package com.aleggeup.automation.schedule;
 
 import org.quartz.Job;
 import org.quartz.Scheduler;

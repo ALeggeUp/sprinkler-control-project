@@ -18,7 +18,7 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
-import com.aleggeup.automation.sprinkler.odm.provider.ObjectMapperProvider;
+import com.aleggeup.automation.odm.provider.ObjectMapperProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.AbstractModule;
 

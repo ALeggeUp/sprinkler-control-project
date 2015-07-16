@@ -22,10 +22,10 @@ import org.quartz.Scheduler;
 import org.quartz.core.QuartzSchedulerResources;
 import org.quartz.spi.JobStore;
 
-import com.aleggeup.automation.sprinkler.schedule.GuiceJobFactory;
-import com.aleggeup.automation.sprinkler.schedule.DatastoreJobStore;
-import com.aleggeup.automation.sprinkler.schedule.quartz.QuartzSchedulerProvider;
-import com.aleggeup.automation.sprinkler.schedule.quartz.QuartzSchedulerResourcesProvider;
+import com.aleggeup.automation.schedule.DatastoreJobStore;
+import com.aleggeup.automation.schedule.GuiceJobFactory;
+import com.aleggeup.automation.schedule.quartz.QuartzSchedulerProvider;
+import com.aleggeup.automation.schedule.quartz.QuartzSchedulerResourcesProvider;
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 

@@ -32,9 +32,9 @@ import org.quartz.spi.OperableTrigger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aleggeup.automation.sprinkler.db.mongo.codec.TriggerCodec;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.OperableTriggerWrapper;
-import com.aleggeup.automation.sprinkler.schedule.quartz.model.OperableTriggerWrapper.OperableTriggerState;
+import com.aleggeup.automation.persist.mongo.codec.TriggerCodec;
+import com.aleggeup.automation.schedule.quartz.model.OperableTriggerWrapper;
+import com.aleggeup.automation.schedule.quartz.model.OperableTriggerWrapper.OperableTriggerState;
 import com.sun.jersey.core.util.Base64;
 
 /**

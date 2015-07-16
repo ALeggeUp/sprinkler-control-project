@@ -20,7 +20,7 @@ package com.aleggeup.automation.sprinkler.db.parse;
 
 import org.parse4j.ParseObject;
 
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge

@@ -1,5 +1,5 @@
 /**
- * CalendarWrapper.java
+ * JobDetailWrapper.java
  *
  * Copyright 2015 [A Legge Up Consulting]
  *
@@ -16,26 +16,32 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.schedule.quartz.model;
+package com.aleggeup.automation.schedule.quartz.model;
 
-import org.quartz.Calendar;
+import org.quartz.JobDetail;
+import org.quartz.JobKey;
 
-import com.aleggeup.automation.sprinkler.persister.Persistable;
+import com.aleggeup.automation.persist.Persistable;
 
 /**
  * @author Stephen Legge
  */
-public class CalendarWrapper implements Persistable {
+public class JobDetailWrapper implements Persistable {
 
-    private static final long serialVersionUID = 8906182312411257643L;
+    private static final long serialVersionUID = -873885339021611367L;
 
     private String id;
 
-    private String calendarName;
+    private JobKey jobKey;
 
-    private Calendar calendar;
+    private JobDetail jobDetail;
 
-    public CalendarWrapper() {
+    public JobDetailWrapper() {
+    }
+
+    public JobDetailWrapper(final JobDetail jobDetail) {
+        setJobKey(jobDetail.getKey());
+        setJobDetail(jobDetail);
     }
 
     @Override
@@ -48,19 +54,19 @@ public class CalendarWrapper implements Persistable {
         this.id = id;
     }
 
-    public String getCalendarName() {
-        return calendarName;
+    public JobKey getJobKey() {
+        return jobKey;
     }
 
-    public void setCalendarName(final String calendarName) {
-        this.calendarName = calendarName;
+    public final void setJobKey(final JobKey jobKey) {
+        this.jobKey = jobKey;
     }
 
-    public Calendar getCalendar() {
-        return calendar;
+    public JobDetail getJobDetail() {
+        return jobDetail;
     }
 
-    public void setCalendar(final Calendar calendar) {
-        this.calendar = calendar;
+    public final void setJobDetail(final JobDetail jobDetail) {
+        this.jobDetail = jobDetail;
     }
 }

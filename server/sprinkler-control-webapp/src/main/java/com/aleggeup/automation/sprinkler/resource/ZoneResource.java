@@ -39,10 +39,10 @@ import org.quartz.TriggerBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.model.Zone;
 import com.aleggeup.automation.sprinkler.model.Zone.ZoneState;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.resource.config.WebResourceParameters;
 import com.aleggeup.automation.sprinkler.schedule.quartz.job.GpioPinControllerJob;
 import com.google.inject.Inject;

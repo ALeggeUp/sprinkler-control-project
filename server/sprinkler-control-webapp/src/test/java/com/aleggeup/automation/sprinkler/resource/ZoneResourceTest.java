@@ -37,9 +37,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.quartz.Scheduler;
 
+import com.aleggeup.automation.odm.DatastoreCollection;
+import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
 import com.aleggeup.automation.sprinkler.model.Zone;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollection;
-import com.aleggeup.automation.sprinkler.odm.DatastoreCollectionRegistry;
 
 /**
  * @author Stephen Legge
