@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.db.parse.converter;
+package com.aleggeup.automation.persist.parse.converter;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

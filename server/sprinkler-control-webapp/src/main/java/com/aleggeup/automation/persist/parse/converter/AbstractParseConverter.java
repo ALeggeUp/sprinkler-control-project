@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.db.parse.converter;
+package com.aleggeup.automation.persist.parse.converter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ import java.util.List;
 import org.parse4j.ParseObject;
 
 import com.aleggeup.automation.persist.Persistable;
-import com.aleggeup.automation.sprinkler.db.parse.ParseConverter;
+import com.aleggeup.automation.persist.parse.ParseConverter;
 
 /**
  * @author Stephen Legge

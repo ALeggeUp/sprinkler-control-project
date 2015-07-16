@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.db.parse;
+package com.aleggeup.automation.persist.parse;
 
 import org.parse4j.Parse;
 

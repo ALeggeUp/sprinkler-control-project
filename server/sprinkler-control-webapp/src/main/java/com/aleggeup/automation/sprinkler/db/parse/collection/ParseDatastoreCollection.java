@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aleggeup.automation.odm.DatastoreCollection;
 import com.aleggeup.automation.persist.Persistable;
-import com.aleggeup.automation.sprinkler.db.parse.ParseConverter;
+import com.aleggeup.automation.persist.parse.ParseConverter;
 
 /**
  * @author Stephen Legge

@@ -1,5 +1,5 @@
 /**
- * CalendarWrapperParseConverter.java
+ * JobDetailWrapperParseConverter.java
  *
  * Copyright 2015 [A Legge Up Consulting]
  *
@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.sprinkler.db.parse.converter;
+package com.aleggeup.automation.persist.parse.converter;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,58 +26,62 @@ import java.io.ObjectOutputStream;
 
 import org.apache.commons.lang3.StringUtils;
 import org.parse4j.ParseObject;
-import org.quartz.Calendar;
+import org.quartz.JobDetail;
+import org.quartz.JobKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aleggeup.automation.persist.mongo.codec.CalendarCodec;
-import com.aleggeup.automation.schedule.quartz.model.CalendarWrapper;
+import com.aleggeup.automation.persist.mongo.codec.JobDetailCodec;
+import com.aleggeup.automation.schedule.quartz.model.JobDetailWrapper;
 import com.sun.jersey.core.util.Base64;
 
 /**
  * @author Stephen Legge
  *
  */
-public class CalendarWrapperParseConverter extends AbstractParseConverter<CalendarWrapper, ParseObject> {
+public class JobDetailWrapperParseConverter extends AbstractParseConverter<JobDetailWrapper, ParseObject> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CalendarWrapperParseConverter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JobDetailWrapperParseConverter.class);
 
     @Override
-    public CalendarWrapper decode(final ParseObject toConvert) {
-        final CalendarWrapper calendar = new CalendarWrapper();
+    public JobDetailWrapper decode(final ParseObject toConvert) {
+        final JobDetailWrapper jobDetail = new JobDetailWrapper();
 
-        calendar.setId(toConvert.getObjectId());
-        calendar.setCalendarName(toConvert.getString(CalendarCodec.FIELD_CALENDAR_NAME));
+        jobDetail.setId(toConvert.getObjectId());
+        jobDetail.setJobKey(new JobKey(toConvert.getString(JobDetailCodec.FIELD_NAME), toConvert
+                .getString(JobDetailCodec.FIELD_GROUP)));
 
-        final String serialized = toConvert.getString(CalendarCodec.FIELD_SERIALIZED);
+        final String serialized = toConvert.getString(JobDetailCodec.FIELD_SERIALIZED);
         final byte[] bytes = Base64.decode(serialized);
         final ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         try (final ObjectInputStream stream = new ObjectInputStream(bais)) {
-            final Calendar decodedCalendar = (Calendar) stream.readObject();
-            if (decodedCalendar != null) {
-                calendar.setCalendar(decodedCalendar);
+            final JobDetail deserialized = (JobDetail) stream.readObject();
+            if (deserialized != null) {
+                jobDetail.setJobDetail(deserialized);
             }
         } catch (final IOException | ClassNotFoundException e) {
             LOGGER.error("Unable to deserialize calendar data", e);
         }
 
-        return calendar;
+        return jobDetail;
     }
 
     @Override
-    public ParseObject encode(final CalendarWrapper toConvert) {
-        final ParseObject parseObject = new ParseObject("calendar");
+    public ParseObject encode(final JobDetailWrapper toConvert) {
+        final ParseObject parseObject = new ParseObject("job");
 
         if (StringUtils.isNotBlank(toConvert.getId())) {
             parseObject.setObjectId(toConvert.getId());
         }
 
-        parseObject.put(CalendarCodec.FIELD_CALENDAR_NAME, toConvert.getCalendarName());
+        parseObject.put(JobDetailCodec.FIELD_NAME, toConvert.getJobKey().getName());
+        parseObject.put(JobDetailCodec.FIELD_GROUP, toConvert.getJobKey().getGroup());
+
         final ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try (final ObjectOutputStream stream = new ObjectOutputStream(baos)) {
-            stream.writeObject(toConvert.getCalendar());
+            stream.writeObject(toConvert.getJobDetail());
             stream.flush();
-            parseObject.put(CalendarCodec.FIELD_SERIALIZED, new String(Base64.encode(baos.toByteArray())));
+            parseObject.put(JobDetailCodec.FIELD_SERIALIZED, new String(Base64.encode(baos.toByteArray())));
         } catch (final IOException e) {
             LOGGER.error("Unable to serialize calendar data", e);
         }
