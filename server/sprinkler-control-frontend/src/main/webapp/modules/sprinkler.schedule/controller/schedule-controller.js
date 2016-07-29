@@ -1,7 +1,7 @@
 /**
  * schedule-controller.js
  *
- * Copyright 2015 [A Legge Up Consulting]
+ * Copyright 2015-2016 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
