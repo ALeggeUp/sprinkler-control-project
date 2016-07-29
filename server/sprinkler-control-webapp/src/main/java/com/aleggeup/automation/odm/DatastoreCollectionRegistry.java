@@ -26,4 +26,6 @@ import com.aleggeup.automation.persist.Persistable;
 public interface DatastoreCollectionRegistry {
 
     <T extends Persistable> DatastoreCollection<T> get(Class<T> type);
+
+    <T extends Persistable> void put(Class<T> key, DatastoreCollection<T> value);
 }

@@ -55,7 +55,15 @@ public class MongoDatastoreCollectionRegistry implements DatastoreCollectionRegi
     }
 
     /* (non-Javadoc)
-     * @see DatastoreCollectionRegistry#get(java.lang.Class, com.mongodb.client.MongoCollection)
+     * @see com.aleggeup.automation.odm.DatastoreCollectionRegistry#put(java.lang.Class, DatastoreCollection)
+     */
+    @Override
+    public <T extends Persistable> void put(final Class<T> key, final DatastoreCollection<T> value) {
+        // TODO Auto-generated method stub
+    }
+
+    /* (non-Javadoc)
+     * @see DatastoreCollectionRegistry#get(java.lang.Class)
      */
     @Override
     @SuppressWarnings("unchecked")
