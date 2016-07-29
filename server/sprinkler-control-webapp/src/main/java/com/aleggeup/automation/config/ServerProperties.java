@@ -23,14 +23,14 @@ package com.aleggeup.automation.config;
  */
 public interface ServerProperties {
 
-    public enum ServerEnvironment {
+    enum ServerEnvironment {
         LOCAL,
         DEV,
         INTEGRATION,
         PROD
     }
 
-    public enum PersistentStorageMode {
+    enum PersistentStorageMode {
         HOSTED,
         CLOUD
     }
