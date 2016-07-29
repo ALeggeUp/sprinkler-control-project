@@ -65,9 +65,9 @@
     <logback-version>1.1.3</logback-version>
     <logback-contrib>0.1.2</logback-contrib>
     
-    <checkstyle-plugin-version>2.15</checkstyle-plugin-version>
-    <checkstyle-version>6.7</checkstyle-version>
-    <sevntu-checkstyle-plugin-version>1.13.3</sevntu-checkstyle-plugin-version>
+    <checkstyle-plugin-version>2.17</checkstyle-plugin-version>
+    <checkstyle-version>7.0</checkstyle-version>
+    <sevntu-checkstyle-plugin-version>1.21.0</sevntu-checkstyle-plugin-version>
     
     <junit-version>4.11</junit-version>
     <mockito-version>1.10.19</mockito-version>
