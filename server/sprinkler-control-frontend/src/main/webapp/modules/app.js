@@ -28,7 +28,7 @@
  * Main module of the application.
  */
 var sprinklerApp = angular.module('sprinkler-control',
-        [ 'ngCookies', 'ngTouch', 'ngResource', 'ngRoute', 'sprinkler-main', 'sprinkler-zone' ]);
+        [ 'ngCookies', 'ngTouch', 'ngResource', 'ngRoute', 'sprinkler-zone' ]);
 
 sprinklerApp.config([ '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(false);
