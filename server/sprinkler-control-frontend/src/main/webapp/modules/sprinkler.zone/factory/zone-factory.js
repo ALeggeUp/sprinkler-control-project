@@ -20,7 +20,7 @@
 
     'use strict';
 
-    angular.module('sprinkler-zone', [ 'ngAnimate' ]).factory('Zone',
+    angular.module('sprinkler-zone-module').factory('Zone',
             [ '$resource', '$cookies', function($resource, $cookies) {
 
                 var urlOverride = $cookies.get('urlOverride');

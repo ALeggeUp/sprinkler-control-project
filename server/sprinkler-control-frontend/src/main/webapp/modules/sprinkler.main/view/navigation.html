@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!--
+  navigation.html
+  
+  Copyright 2014-2016 [A Legge Up Consulting]
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.aleggeup.com">[ A Legge Up ]</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li data-ng-class="{ active : isLocation('/main') }"><a data-ui-sref="main">Main <span class="sr-only">(current)</span></a></li>
+          <li data-ng-class="{ active : isLocation('/zones') }"><a data-ui-sref="zones">Zones <span class="sr-only">(current)</span></a></li>
+          <li data-ng-class="{ active : isLocation('/schedules') }"><a data-ui-sref="schedules">Schedules</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a data-ui-sref="login">Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>

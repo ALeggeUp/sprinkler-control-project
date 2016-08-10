@@ -21,7 +21,7 @@ package com.aleggeup.automation.persist;
 import java.io.Serializable;
 
 /**
- * @author slegge
+ * @author Stephen Legge
  *
  */
 public interface Persistable extends Serializable {

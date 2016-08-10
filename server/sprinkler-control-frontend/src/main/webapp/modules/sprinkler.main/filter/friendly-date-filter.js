@@ -20,7 +20,7 @@
 
     'use strict';
 
-    var app = angular.module('sprinkler-control');
+    var app = angular.module('sprinkler-main-module');
 
     app.filter('friendlydate', function() {
         // Setup format

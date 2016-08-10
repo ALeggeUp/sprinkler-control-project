@@ -20,7 +20,7 @@
 
     'use strict';
 
-    var app = angular.module('sprinkler-zone');
+    var app = angular.module('sprinkler-zone-module');
 
     app.directive('timer', function() {
         

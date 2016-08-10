@@ -1,7 +1,7 @@
 /**
- * schedule-controller.js
+ * sprinkler-main-module.js
  *
- * Copyright 2015-2016 [A Legge Up Consulting]
+ * Copyright 2016 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,12 +20,7 @@
 
     'use strict';
 
-    var app = angular.module('sprinkler-schedule-module');
-
-    app.controller('ScheduleController', [ '$scope', function($scope) {
-        
-        $scope.viewClass = "scheduleView";
-
-    } ]);
+    // var module =
+    angular.module('sprinkler-main-module', ['ngHolder']);
 
 })();

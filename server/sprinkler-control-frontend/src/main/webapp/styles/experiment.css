@@ -165,7 +165,7 @@ div > div.container > div.bg {
     z-index: -1;
 }
 
-div.zoneView > div.container > div.bg {
+div.zoneView > div.container > div.bg, div.zones-background {
     background: url('Irrigation-file-blur.jpg') no-repeat;
 }
 

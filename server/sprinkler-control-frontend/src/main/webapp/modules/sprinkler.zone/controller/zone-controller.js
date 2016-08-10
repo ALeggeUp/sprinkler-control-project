@@ -20,10 +20,12 @@
 
     'use strict';
 
-    var app = angular.module('sprinkler-zone');
+    var app = angular.module('sprinkler-zone-module');
 
-    app.controller('ZoneController', [ '$scope', '$http', '$location', '$interval', 'Zone',
-            function($scope, $http, $location, $interval, Zone) {
+    app.controller('ZoneController', [ '$scope', '$rootScope', '$http', '$location', '$interval', 'Zone',
+            function($scope, $rootScope, $http, $location, $interval, Zone) {
+
+                var vm = this;
 
                 $scope.viewClass = 'zoneView';
 

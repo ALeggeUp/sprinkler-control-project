@@ -53,7 +53,7 @@ public class GuiceConfig extends GuiceServletContextListener {
     }
 
     protected Iterable<Module> pickModules(final ServerProperties serverProperties) {
-        final List<Module> modules = new ArrayList<Module>();
+        final List<Module> modules = new ArrayList<>();
 
         addConditionalModules(serverProperties.persistentStorageMode(), modules);
 

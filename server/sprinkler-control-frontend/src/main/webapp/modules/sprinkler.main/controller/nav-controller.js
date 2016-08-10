@@ -1,5 +1,5 @@
 /**
- * schedule-controller.js
+ * nav-controller.js
  *
  * Copyright 2015-2016 [A Legge Up Consulting]
  *
@@ -20,12 +20,10 @@
 
     'use strict';
 
-    var app = angular.module('sprinkler-schedule-module');
+    var app = angular.module('sprinkler-main-module');
 
-    app.controller('ScheduleController', [ '$scope', function($scope) {
-        
-        $scope.viewClass = "scheduleView";
-
+    app.controller('NavController', [ '$scope', function($scope) {
+    	var nav = this;
     } ]);
 
 })();
