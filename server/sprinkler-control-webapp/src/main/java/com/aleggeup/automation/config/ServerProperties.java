@@ -31,6 +31,7 @@ public interface ServerProperties {
     }
 
     enum PersistentStorageMode {
+        INIT,
         HOSTED,
         CLOUD
     }

@@ -1,7 +1,7 @@
 /**
- * ParseDatabaseModule.java
+ * CloudDatabaseModule.java
  *
- * Copyright 2015 [A Legge Up Consulting]
+ * Copyright 2016 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,14 @@
 
 package com.aleggeup.automation.sprinkler.guice;
 
-import com.aleggeup.automation.odm.Datastore;
-import com.aleggeup.automation.odm.DatastoreCollectionRegistry;
-import com.aleggeup.automation.persist.parse.ParseDatastore;
-import com.aleggeup.automation.sprinkler.db.parse.collection.ParseDatastoreCollectionRegistry;
 import com.google.inject.AbstractModule;
-import com.google.inject.Singleton;
 
 /**
  * @author Stephen Legge
- *
  */
-public class ParseDatabaseModule extends AbstractModule {
+public class CloudDatabaseModule extends AbstractModule {
 
-    public ParseDatabaseModule() {
+    public CloudDatabaseModule() {
     }
 
     /* (non-Javadoc)
@@ -39,7 +33,5 @@ public class ParseDatabaseModule extends AbstractModule {
      */
     @Override
     protected void configure() {
-        bind(Datastore.class).to(ParseDatastore.class).in(Singleton.class);
-        bind(DatastoreCollectionRegistry.class).to(ParseDatastoreCollectionRegistry.class).in(Singleton.class);
     }
 }

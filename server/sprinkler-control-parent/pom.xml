@@ -52,7 +52,7 @@
     <jersey-version>1.19</jersey-version>
     <guice-version>3.0</guice-version>
     
-    <mongodb-version>3.0.0</mongodb-version>
+    <mongodb-version>3.2.2</mongodb-version>
     <joda-time-version>2.7</joda-time-version>
     <joda-datatype-version>2.5.3</joda-datatype-version>
     <quartz-version>2.2.1</quartz-version>
@@ -426,12 +426,6 @@
         <groupId>com.sun.jersey.contribs</groupId>
         <artifactId>jersey-apache-client</artifactId>
         <version>${jersey-version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>com.github.thiagolocatelli</groupId>
-        <artifactId>parse4j</artifactId>
-        <version>${parse4j-version}</version>
       </dependency>
 
       <dependency>

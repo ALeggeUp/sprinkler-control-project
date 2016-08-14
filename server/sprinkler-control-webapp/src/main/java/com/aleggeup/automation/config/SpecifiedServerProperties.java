@@ -26,12 +26,9 @@ import com.google.inject.Inject;
 /**
  * @author Stephen Legge
  */
-public class SpecifiedServerProperties extends DefaultServerProperties {
+public class SpecifiedServerProperties extends SavedServerProperties {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpecifiedServerProperties.class);
-
-    private static final String KEY_ENVIRONMENT_PROPERTY = "server-environment";
-    private static final String KEY_MODE_PROPERTY = "storage-mode";
 
     @Inject
     public SpecifiedServerProperties() {

@@ -1,7 +1,7 @@
 /**
- * ParseAnalyticsService.java
+ * DefaultNopAnalyticsService.java
  *
- * Copyright 2015 [A Legge Up Consulting]
+ * Copyright 2016 [A Legge Up Consulting]
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,25 +16,15 @@
  * limitations under the License.
  */
 
-package com.aleggeup.automation.analytics.parse;
-
-import org.parse4j.Parse;
-import org.parse4j.ParseAnalytics;
-
-import com.aleggeup.automation.analytics.AnalyticsService;
+package com.aleggeup.automation.analytics;
 
 /**
  * @author Stephen Legge
  */
-public class ParseAnalyticsService implements AnalyticsService {
+public class DefaultNopAnalyticsService implements AnalyticsService {
 
-    private static final String APPLICATION_ID = "FkBNNyNpJ1Jg5XXjlByTsek57lEOY8t3NFfA8YKx";
-    private static final String REST_API_KEY = "ldRqg12eb11ztpQQNiIqVB6K6FNkZB4Hv1K55Ns7";
-
-    private static final String EVENT_APP_CLOSED = "AppClosed";
-
-    public ParseAnalyticsService() {
-        Parse.initialize(APPLICATION_ID, REST_API_KEY);
+    public DefaultNopAnalyticsService() {
+        // TODO Auto-generated constructor stub
     }
 
     /* (non-Javadoc)
@@ -42,7 +32,7 @@ public class ParseAnalyticsService implements AnalyticsService {
      */
     @Override
     public void start() {
-        ParseAnalytics.trackAppOpened();
+        // TODO Auto-generated method stub
     }
 
     /* (non-Javadoc)
@@ -50,6 +40,6 @@ public class ParseAnalyticsService implements AnalyticsService {
      */
     @Override
     public void end() {
-        ParseAnalytics.trackEvent(EVENT_APP_CLOSED);
+        // TODO Auto-generated method stub
     }
 }
