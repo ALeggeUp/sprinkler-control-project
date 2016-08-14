@@ -18,9 +18,6 @@
 
 package com.aleggeup.automation.sprinkler.startup;
 
-import java.util.concurrent.TimeUnit;
-
-import org.parse4j.ParseExecutor;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.core.QuartzSchedulerResources;
@@ -59,14 +56,5 @@ public class Shutdown {
         } catch (final SchedulerException e) {
             LOGGER.warn("Unable to shutdown scheduler", e);
         }
-
-        try {
-            final boolean shutdown = ParseExecutor.getExecutor().awaitTermination(10, TimeUnit.SECONDS);
-            LOGGER.info("Shutdown: " + shutdown);
-        } catch (final InterruptedException e) {
-            LOGGER.warn("Interrupted awaiting termination of ParseExecutor", e);
-        }
-
-        ParseExecutor.getExecutor().shutdownNow();
     }
 }

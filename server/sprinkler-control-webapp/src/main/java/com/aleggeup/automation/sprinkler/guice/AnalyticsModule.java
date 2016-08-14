@@ -19,7 +19,7 @@
 package com.aleggeup.automation.sprinkler.guice;
 
 import com.aleggeup.automation.analytics.AnalyticsService;
-import com.aleggeup.automation.analytics.parse.ParseAnalyticsService;
+import com.aleggeup.automation.analytics.DefaultNopAnalyticsService;
 import com.google.inject.AbstractModule;
 
 /**
@@ -32,6 +32,6 @@ public class AnalyticsModule extends AbstractModule {
      */
     @Override
     protected void configure() {
-        bind(AnalyticsService.class).to(ParseAnalyticsService.class);
+        bind(AnalyticsService.class).to(DefaultNopAnalyticsService.class);
     }
 }

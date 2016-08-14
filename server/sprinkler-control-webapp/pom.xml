@@ -308,11 +308,6 @@
     </dependency>
 
     <dependency>
-      <groupId>com.github.thiagolocatelli</groupId>
-      <artifactId>parse4j</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
     </dependency>

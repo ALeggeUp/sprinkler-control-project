@@ -29,6 +29,9 @@ import org.slf4j.LoggerFactory;
  */
 public class DefaultServerProperties implements ServerProperties {
 
+    protected static final String KEY_ENVIRONMENT_PROPERTY = "server-environment";
+    protected static final String KEY_MODE_PROPERTY = "storage-mode";
+
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultServerProperties.class);
 
     private static final String SEPARATOR = ".";
@@ -43,7 +46,7 @@ public class DefaultServerProperties implements ServerProperties {
 
     @Override
     public PersistentStorageMode persistentStorageMode() {
-        return PersistentStorageMode.CLOUD;
+        return PersistentStorageMode.INIT;
     }
 
     @Override

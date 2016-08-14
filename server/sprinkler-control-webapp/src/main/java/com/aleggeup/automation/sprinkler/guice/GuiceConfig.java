@@ -69,12 +69,17 @@ public class GuiceConfig extends GuiceServletContextListener {
 
     protected void addConditionalModules(final PersistentStorageMode storageMode, final List<Module> modules) {
         switch (storageMode) {
+            case INIT:
+                modules.add(new InitDatabaseModule());
+                break;
             case HOSTED:
                 modules.add(new MongoDatabaseModule());
                 break;
             case CLOUD:
+                modules.add(new CloudDatabaseModule());
+                break;
             default:
-                modules.add(new ParseDatabaseModule());
+                modules.add(new InitDatabaseModule());
                 break;
         }
     }
